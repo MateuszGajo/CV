@@ -3,9 +3,21 @@
     margin: 0;
     box-sizing: border-box;
 }
+html{
+    font-family: 'Roboto', sans-serif;
+}
 
-span,p{
+body{
+    background-color: grey;
+}
+.resume__left  span,
+.resume__left  p{
     color:#b1eaff
+}
+
+.resume__right h1{
+    color:#0bb5f4;
+    margin-bottom:15px;
 }
 
 .item-circle{
@@ -45,10 +57,87 @@ span,p{
     padding:10px 0;
 }
 
+.progress-bar{
+    position:relative;
+    margin-left:25px;
+}
+
+.progress-bar::after{
+    content:"";
+    position:absolute;
+    top:4.5px;
+    left:-15px;
+    height:100%;
+    width:1px;
+    background-color:#0bb5f4;
+}
+.progress-bar:last-child::after{
+    height:calc(100% - 4.5px);
+}
+
+
+
+.progress-bar::before{
+    content:"";
+    position:absolute;
+    top:19.5px;
+    left:-20px;
+    z-index:1;
+    border-radius: 50%;
+    width:10px;
+    height:10px;
+    background-color: #fff;
+    border:1px solid #0bb5f4;
+}
+div .progress-bar:nth-of-type(2)::before{
+    top:4.5px;
+}
+
+.progress-bar::after{
+    content:"";
+    position:absolute;
+    top:4.5px;
+    left:-15px;
+    height:100%;
+    width:1px;
+    background-color:#0bb5f4;
+}
+
+.progress-bar:last-child::after{
+    height:calc(100% - 4.5px);
+}
+
+.progress-bar::before{
+    content:"";
+    position:absolute;
+    top:19.5px;
+    left:-20px;
+    z-index:1;
+    border-radius: 50%;
+    width:10px;
+    height:10px;
+    background-color: #fff;
+    border:1px solid #0bb5f4;
+}
+
+.progress-bar + 
+.progress-bar{
+    padding-top:15px;
+}
+.progress-bar__date{
+    margin-bottom:10px;
+}
+
+.progress-bar__description--span{
+    color:#555555
+}
+
+
+
 .resume{
     display:flex;
-    height:12in;
-    width:800px;
+    height:12.2in;
+    width:8.5in;
 }
 
 .resume__left{
@@ -126,6 +215,12 @@ span,p{
    
 }
 
+.resume__left__content__technologies__wrapper__item{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .resume__left__content__technologies__wrapper__item:nth-child(3){
     display:flex;
     align-items: center;
@@ -172,3 +267,37 @@ span,p{
     text-align: center;
 }
 
+.resume__right{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width:100%;
+    padding:15px;
+    background-color: #fff;
+}
+
+
+
+
+
+
+
+.resume__right__experience__item__name--h3{
+    font-weight: 400;
+}
+
+
+
+.resume__right__education{
+    margin-top:40px;
+}
+
+/* .progress-bar__date{
+    padding-top:15px;
+} */
+
+.resume__right__rodo{
+    text-align: center;
+    columns: #555555;
+    font-size: 0.9rem;
+}
